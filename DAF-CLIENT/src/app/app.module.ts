@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header/header.component';
@@ -19,9 +19,15 @@ import { ServicesComponent } from './services/services.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { WorksComponent } from './works/works.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
+import { RouterModule, Routes } from '@angular/router';
 
-
+const routes: Routes = [
+  // Other routes
+  { path: 'contact', component: ContactUsComponent },
+  {path: 'home', component:HomeComponent}
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,12 +45,16 @@ import { WorksComponent } from './works/works.component';
     QuestionsComponent,
     AboutUsComponent,
     WorksComponent,
+    ContactUsComponent,
     
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    [RouterModule.forRoot(routes)],
+  
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

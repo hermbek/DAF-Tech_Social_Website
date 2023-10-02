@@ -4,13 +4,30 @@
       
       <div *ngFor="let item of aboutus" class="col-lg-6 info">
           <h5>About Us</h5>
-          <h2>We Help IT Companies Scale Engineering Capacity</h2>
+          <h2>What Makes Us Stand Out</h2>
           <p>{{item.attributes.WhoWeAre}} </p>
           <div class="skill-items">
               <!-- Progress Bar Start -->
-    
+              <div class="item-container">
+                <div class="item">
+                  <i class="fas fa-network-wired"></i>
+                  <p class="description">Quality Product</p>
+                </div>
+                <div class="item">
+                  <i class="fas fa-cubes"></i>
+                  <p class="description">Consultation</p>
+                </div>
+                <div class="item">
+                  <i class="fas fa-users"></i>
+                  <p class="description">Customer Support</p>
+                </div>
+                <div class="item">
+                  <i class="fas fa-lightbulb"></i>
+                  <p class="description">Creative Designers</p>
+                </div>
+              </div>
               
-              <div class="progress-box">
+              <!-- <div class="progress-box">
                   <h5>Software Development</h5>
                   <div class="progress">
                       <div class="progress-bar" role="progressbar" data-width="88">
@@ -38,7 +55,7 @@
                       </div>
                   </div>
               </div>
-    
+     -->
                     
               <!-- End Progressbar -->
           </div>

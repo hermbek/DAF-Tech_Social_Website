@@ -1,19 +1,11 @@
 
-
 <div class="breadcrumb-area shadow dark bg-fixed text-light less-background">
- 
-
     <div class="container ">
         <div class="row align-center">
             <div class="col-lg-6">
                 <h2>Consulted admitting is power acuteness.</h2>
             </div>
-            <div class="col-lg-6 text-right">
-                <ul class="breadcrumb">
-                    <li><a href="https://wpriverthemes.com/tandaelem/"><i class="fas fa-home"></i> Home</a></li>
-                    <li class="active">Blog Details</li>
-                </ul>
-            </div>
+           
         </div>
     </div>
 </div>
@@ -26,7 +18,6 @@
             <div class="row">
                                 <div class="blog-content col-lg-8 col-md-12">
                                    <div class="item">
-
     <div class="blog-item-box">
         <!-- Start Post Thumb -->
         <div class="thumb">
@@ -99,19 +90,16 @@
 </div>
                         <!-- Start Post Tags-->
             <div class="footer-entry">
-        <span>Tags</span>
-             <a href="https://wpriverthemes.com/tandaelem/tag/analysis/" rel="tag">Analysis</a><a href="https://wpriverthemes.com/tandaelem/tag/data/" rel="tag">Data</a><a href="https://wpriverthemes.com/tandaelem/tag/process/" rel="tag">Process</a>     </div>
+        <span> </span>
+              </div>
 <!-- End Post Tags -->
         </div>
     </div>
 </div>
-
+ 
 <!-- Start Post Pagination -->
 <div class="post-pagi-area">
-        <a href="https://wpriverthemes.com/tandaelem/unsatiable-entreaties-may-collecting-power/">
-        <i class="fas fa-angle-double-left"></i> Previous Post        <h5>Unsatiable entreaties may collecting</h5>
-        
-    </a>
+       
         </div>
 <!-- End Post Pagination --><!-- Start Blog Comment -->
 
@@ -121,25 +109,23 @@
                     <aside>
                         <div id="search-1" class="sidebar-item widget_search"><div class="sidebar-item search">
     <div class="sidebar-info">
-        <form role="search" method="get" action="https://wpriverthemes.com/tandaelem/">
-            <input type='search' name="s" placeholder="Search Here..." class="form-control" id="search-box" value="" >
+        <input type='search' name="s" (input)="filterList($event.target)" placeholder="Search Here..." class="form-control" id="search-box" >
 	        <button type="submit"><i class="fas fa-search"></i></button>
-        </form>
+       
     </div>
 </div></div>
 		<div id="recent-posts-1" class="sidebar-item widget_recent_entries">
 		<div class="title"><h4>Recent Posts</h4>  </div>
-		<ul>
-											<li>
-					<a href="index.html" aria-current="page">{{blog.attributes.Title }}</a>
-									</li>
-											<li>
-					<a href="index.html">{{blog.attributes.Title }}</a>
-									</li>
-											<li>
-					<a href="index.html">{{blog.attributes.Title }}</a>
-									</li>
-					</ul>
+        <ul>
+            
+                <li *ngFor="let item of filteredBlogs">
+                    
+                        <a class="btn-simple" (click)="goToDetail(item)">{{ item.attributes.Title }}</a>
+            
+                </li>
+         
+              
+          </ul>
 
 		</div>
 			
