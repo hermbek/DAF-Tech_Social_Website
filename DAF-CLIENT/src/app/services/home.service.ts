@@ -46,5 +46,10 @@ export class HomeService {
   getWorks(){
     return   this.http.get<any>(this.baseUrl+ "/api/works?populate=*" )
   }
+
+  createComment (commentPost:any){
+
+    return this.http.post<any>(this.baseUrl+"/api/comments",commentPost)
+  }
 }
 

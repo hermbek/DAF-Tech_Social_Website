@@ -6,3 +6,16 @@
   .hoverable-image:hover {
     transform: scale(1.5);
   }
+  .clients-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carousel-item {
+    margin-right: 100px;
+  }
+  
+  .carousel-item:last-child {
+    margin-right: 0;
+  }
